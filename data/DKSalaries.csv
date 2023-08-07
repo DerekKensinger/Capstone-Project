@@ -1,0 +1,51 @@
+Position,Name + ID,Name,ID,Roster Position,Salary,Game Info,TeamAbbrev,AvgPointsPerGame
+D,Max Verstappen (28652006),Max Verstappen,28652006,CPT,22500,Hungarian Grand Prix 2023,RB,35.57
+D,Sergio Perez (28652007),Sergio Perez,28652007,CPT,15900,Hungarian Grand Prix 2023,RB,19.73
+D,Max Verstappen (28651986),Max Verstappen,28651986,D,15000,Hungarian Grand Prix 2023,RB,35.57
+D,Lewis Hamilton (28652008),Lewis Hamilton,28652008,CPT,15000,Hungarian Grand Prix 2023,MERC,16.95
+D,Fernando Alonso (28652009),Fernando Alonso,28652009,CPT,14100,Hungarian Grand Prix 2023,AM,18.53
+CNSTR,Red Bull Racing  (28652026),Red Bull Racing ,28652026,CNSTR,13800,Hungarian Grand Prix 2023,RB,53.4
+D,Charles Leclerc (28652010),Charles Leclerc,28652010,CPT,13500,Hungarian Grand Prix 2023,FERR,11.36
+D,Lando Norris (28652011),Lando Norris,28652011,CPT,12300,Hungarian Grand Prix 2023,MCL,7.94
+D,Carlos Sainz Jr (28652012),Carlos Sainz Jr,28652012,CPT,11700,Hungarian Grand Prix 2023,FERR,9.9
+D,George Russell (28652013),George Russell,28652013,CPT,10800,Hungarian Grand Prix 2023,MERC,10.06
+D,Sergio Perez (28651987),Sergio Perez,28651987,D,10600,Hungarian Grand Prix 2023,RB,19.73
+D,Lewis Hamilton (28651988),Lewis Hamilton,28651988,D,10000,Hungarian Grand Prix 2023,MERC,16.95
+D,Oscar Piastri (28652014),Oscar Piastri,28652014,CPT,9900,Hungarian Grand Prix 2023,MCL,3.5
+CNSTR,Mercedes AMG Motorsport  (28652027),Mercedes AMG Motorsport ,28652027,CNSTR,9500,Hungarian Grand Prix 2023,MERC,25.91
+D,Fernando Alonso (28651989),Fernando Alonso,28651989,D,9400,Hungarian Grand Prix 2023,AM,18.53
+D,Charles Leclerc (28651990),Charles Leclerc,28651990,D,9000,Hungarian Grand Prix 2023,FERR,11.36
+D,Lance Stroll (28652015),Lance Stroll,28652015,CPT,9000,Hungarian Grand Prix 2023,AM,4.7
+CNSTR,Ferrari  (28652028),Ferrari ,28652028,CNSTR,8900,Hungarian Grand Prix 2023,FERR,19.22
+D,Esteban Ocon (28652016),Esteban Ocon,28652016,CPT,8400,Hungarian Grand Prix 2023,ALPN,5.1
+D,Lando Norris (28651991),Lando Norris,28651991,D,8200,Hungarian Grand Prix 2023,MCL,7.94
+D,Carlos Sainz Jr (28651992),Carlos Sainz Jr,28651992,D,7800,Hungarian Grand Prix 2023,FERR,9.9
+D,Pierre Gasly (28652017),Pierre Gasly,28652017,CPT,7800,Hungarian Grand Prix 2023,ALPN,5.7
+CNSTR,McLaren  (28652029),McLaren ,28652029,CNSTR,7500,Hungarian Grand Prix 2023,MCL,9.24
+D,Daniel Ricciardo (28652018),Daniel Ricciardo,28652018,CPT,7500,Hungarian Grand Prix 2023,AT,0
+CNSTR,Aston Martin F1 Team  (28652030),Aston Martin F1 Team ,28652030,CNSTR,7300,Hungarian Grand Prix 2023,AM,21.43
+D,George Russell (28651993),George Russell,28651993,D,7200,Hungarian Grand Prix 2023,MERC,10.06
+D,Yuki Tsunoda (28652019),Yuki Tsunoda,28652019,CPT,6900,Hungarian Grand Prix 2023,AT,6
+D,Oscar Piastri (28651994),Oscar Piastri,28651994,D,6600,Hungarian Grand Prix 2023,MCL,3.5
+D,Alexander Albon (28652020),Alexander Albon,28652020,CPT,6600,Hungarian Grand Prix 2023,WILL,5.5
+D,Lance Stroll (28651995),Lance Stroll,28651995,D,6000,Hungarian Grand Prix 2023,AM,4.7
+D,Valtteri Bottas (28652021),Valtteri Bottas,28652021,CPT,6000,Hungarian Grand Prix 2023,AR,4.8
+D,Esteban Ocon (28651996),Esteban Ocon,28651996,D,5600,Hungarian Grand Prix 2023,ALPN,5.1
+D,Nico Hulkenberg (28652022),Nico Hulkenberg,28652022,CPT,5400,Hungarian Grand Prix 2023,HAAS,2.6
+D,Pierre Gasly (28651997),Pierre Gasly,28651997,D,5200,Hungarian Grand Prix 2023,ALPN,5.7
+D,Kevin Magnussen (28652023),Kevin Magnussen,28652023,CPT,5100,Hungarian Grand Prix 2023,HAAS,3.3
+D,Daniel Ricciardo (28651998),Daniel Ricciardo,28651998,D,5000,Hungarian Grand Prix 2023,AT,0
+D,Logan Sargeant (28652024),Logan Sargeant,28652024,CPT,4800,Hungarian Grand Prix 2023,WILL,2.8
+D,Yuki Tsunoda (28651999),Yuki Tsunoda,28651999,D,4600,Hungarian Grand Prix 2023,AT,6
+CNSTR,Alpine F1 Team  (28652031),Alpine F1 Team ,28652031,CNSTR,4500,Hungarian Grand Prix 2023,ALPN,8.1
+D,Guanyu Zhou (28652025),Guanyu Zhou,28652025,CPT,4500,Hungarian Grand Prix 2023,AR,4.5
+D,Alexander Albon (28652000),Alexander Albon,28652000,D,4400,Hungarian Grand Prix 2023,WILL,5.5
+D,Valtteri Bottas (28652001),Valtteri Bottas,28652001,D,4000,Hungarian Grand Prix 2023,AR,4.8
+D,Nico Hulkenberg (28652002),Nico Hulkenberg,28652002,D,3600,Hungarian Grand Prix 2023,HAAS,2.6
+CNSTR,Alphatauri  (28652032),Alphatauri ,28652032,CNSTR,3500,Hungarian Grand Prix 2023,AT,2
+D,Kevin Magnussen (28652003),Kevin Magnussen,28652003,D,3400,Hungarian Grand Prix 2023,HAAS,3.3
+D,Logan Sargeant (28652004),Logan Sargeant,28652004,D,3200,Hungarian Grand Prix 2023,WILL,2.8
+CNSTR,Williams  (28652034),Williams ,28652034,CNSTR,3200,Hungarian Grand Prix 2023,WILL,2.5
+CNSTR,Haas F1 Team  (28652033),Haas F1 Team ,28652033,CNSTR,3100,Hungarian Grand Prix 2023,HAAS,2
+D,Guanyu Zhou (28652005),Guanyu Zhou,28652005,D,3000,Hungarian Grand Prix 2023,AR,4.5
+CNSTR,Alfa Romeo Racing  (28652035),Alfa Romeo Racing ,28652035,CNSTR,3000,Hungarian Grand Prix 2023,AR,3
