@@ -3,13 +3,14 @@ from flask_sqlalchemy import SQLAlchemy
 from os import path
 from flask_login import LoginManager
 
+
 db = SQLAlchemy()
 DB_NAME = "database.db"
 
 
 def create_app():
     app = Flask(__name__)
-    app.config['SECRET_KEY'] = 'hjshjhdjah kjshkjdhjs'
+    app.config['SECRET_KEY'] = 'how you doin keep it movin'
     app.config['SQLALCHEMY_DATABASE_URI'] = f'sqlite:///{DB_NAME}'
     db.init_app(app)
 
@@ -18,6 +19,9 @@ def create_app():
 
     app.register_blueprint(views, url_prefix='/')
     app.register_blueprint(auth, url_prefix='/')
+    
+    # Register the views blueprint again with a unique name for the /optimize URL prefix
+    app.register_blueprint(views, name='optimize_blueprint', url_prefix='/optimize')
 
     from .models import User, Note
     
