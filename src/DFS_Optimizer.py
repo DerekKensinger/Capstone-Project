@@ -40,10 +40,10 @@ pos_num_available = {
 salary_cap = 50000
 
 # Budget constraint for the CPT
-CPT_budget = 22500  # You can adjust this value based on the desired budget for the CPT, this is the max for the current contest
+CPT_budget = 22500  # You can adjust this value based on the desired budget for the CPT, this is the max for the current contest 
 
 # The amount of lineups run in a simulation
-for lineup in range(1, 101):
+for lineup in range(1, 21):
     # Establish variables for our pulp problem
     _vars = {k: LpVariable.dict(k, v, cat="Binary") for k, v in points.items()}
 
