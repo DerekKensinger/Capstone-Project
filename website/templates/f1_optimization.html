@@ -1,0 +1,87 @@
+{% extends "base.html" %}
+{% block title %}Formula 1 Optimization{% endblock %}
+{% block content %}
+<div class="container">
+  <h1 class="mt-4">Formula 1 Optimization</h1>
+  <!-- Form for optimizing Formula 1 data -->
+  <form method="POST" action="/f1/optimize_f1">
+    <!-- Table to display Formula 1 data -->
+    <table class="table table-striped mt-4">
+      <thead>
+        <tr>
+          <th>Constructor</th>
+          <th>Driver 1</th>
+          <th>Driver 2</th>
+          <th>Driver 3</th>
+          <th>Driver 4</th>
+          <th>Driver 5</th>
+          <th>Total Points</th>
+        </tr>
+      </thead>
+      <tbody id="resultsTable">
+        <!-- Data will be populated here using JavaScript -->
+      </tbody>
+    </table>
+    <!-- Button to trigger optimization -->
+    <div class="text-center">
+      <button type="button" class="btn btn-primary" id="optimizeButton">Optimize</button>
+    </div>
+  </form>
+</div>
+
+<!-- JavaScript specific to your application -->
+{% block javascript %}
+<script type="text/javascript">
+  // Fetch data and populate the table when the page loads
+  window.addEventListener('DOMContentLoaded', (event) => {
+    fetch('/f1/optimize-f1-data') // Send a GET request to retrieve data
+      .then((response) => response.json()) // Parse the response as JSON
+      .then((data) => {
+        const resultsTable = document.getElementById('resultsTable');
+        resultsTable.innerHTML = ''; // Clear existing data
+        if (data.length > 0) {
+          data.forEach((row) => {
+            const newRow = resultsTable.insertRow();
+            Object.values(row).forEach((value) => {
+              const cell = newRow.insertCell();
+              // Check if the value is 'CNSTR_Alfa_Romeo_Racing' and display it accordingly
+              if (value === 'CNSTR_Alfa_Romeo_Racing') {
+                cell.textContent = 'Alfa Romeo Racing'; // Display the desired label
+              } else {
+                cell.appendChild(document.createTextNode(value));
+              }
+            });
+          });
+        } else {
+          const newRow = resultsTable.insertRow();
+          const cell = newRow.insertCell();
+          cell.colSpan = 7;
+          cell.textContent = 'No data available.';
+        }
+      })
+      .catch((error) => {
+        console.error('Error fetching data:', error);
+      });
+  });
+
+  // Function to trigger CSV download when the "Optimize" button is clicked
+  document.getElementById('optimizeButton').addEventListener('click', () => {
+    fetch('/f1/optimize-f1-data') // Send a GET request to retrieve data
+      .then((response) => response.blob()) // Get the response as a blob
+      .then((blob) => {
+        const url = window.URL.createObjectURL(blob); // Create a URL for the blob data
+        const a = document.createElement('a'); // Create a hidden anchor element
+        a.style.display = 'none';
+        a.href = url; // Set the anchor's href to the blob URL
+        a.download = 'optimized_lineups.csv'; // Set the download filename
+        document.body.appendChild(a); // Append the anchor to the document
+        a.click(); // Trigger a click event to initiate the download
+        window.URL.revokeObjectURL(url); // Release the blob URL
+      })
+      .catch((error) => {
+        console.error('Error fetching CSV:', error);
+      });
+  });
+</script>
+{% endblock %}
+{% endblock %}

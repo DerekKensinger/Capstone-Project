@@ -3,12 +3,14 @@
   <head>
     <meta charset="utf-8" />
     <meta name="viewport" content="width=device-width, initial-scale=1" />
+    <!-- Include Bootstrap CSS from a CDN -->
     <link
       rel="stylesheet"
       href="https://stackpath.bootstrapcdn.com/bootstrap/4.4.1/css/bootstrap.min.css"
       integrity="sha384-Vkoo8x4CGsO3+Hhxv8T/Q5PaXtkKtu6ug5TOeNV6gBiFeWPGFN9MuhOf23Q9Ifjh"
       crossorigin="anonymous"
     />
+    <!-- Include Font Awesome CSS from a CDN -->
     <link
       rel="stylesheet"
       href="https://stackpath.bootstrapcdn.com/font-awesome/4.7.0/css/font-awesome.min.css"
@@ -18,6 +20,7 @@
     <title>{% block title %}Home{% endblock %}</title>
   </head>
   <body>
+    <!-- Navigation Bar -->
     <nav class="navbar navbar-expand-lg navbar-dark bg-dark">
       <button
         class="navbar-toggler"
@@ -30,9 +33,11 @@
       <div class="collapse navbar-collapse" id="navbar">
         <div class="navbar-nav">
           {% if user.is_authenticated %}
-          <a class="nav-item nav-link" id="home" href="/">Home</a>
+          <!-- If user is authenticated, show 'Optimize' and 'Logout' links -->
+          <a class="nav-item nav-link" id="optimize" href="/f1/optimize-f1">Optimize</a>
           <a class="nav-item nav-link" id="logout" href="/logout">Logout</a>
           {% else %}
+          <!-- If user is not authenticated, show 'Login' and 'Sign Up' links -->
           <a class="nav-item nav-link" id="login" href="/login">Login</a>
           <a class="nav-item nav-link" id="signUp" href="/sign-up">Sign Up</a>
           {% endif %}
@@ -40,9 +45,11 @@
       </div>
     </nav>
 
+    <!-- Flash Messages -->
     {% with messages = get_flashed_messages(with_categories=true) %} {% if
     messages %} {% for category, message in messages %} {% if category ==
     'error' %}
+    <!-- Display error messages with a red alert -->
     <div class="alert alert-danger alter-dismissable fade show" role="alert">
       {{ message }}
       <button type="button" class="close" data-dismiss="alert">
@@ -50,6 +57,7 @@
       </button>
     </div>
     {% else %}
+    <!-- Display success messages with a green alert -->
     <div class="alert alert-success alter-dismissable fade show" role="alert">
       {{ message }}
       <button type="button" class="close" data-dismiss="alert">
@@ -58,7 +66,10 @@
     </div>
     {% endif %} {% endfor %} {% endif %} {% endwith %}
 
+    <!-- Main content container -->
     <div class="container">{% block content %} {% endblock %}</div>
+
+    <!-- Include jQuery, Popper.js, and Bootstrap JavaScript from CDNs -->
     <script
       src="https://code.jquery.com/jquery-3.2.1.slim.min.js"
       integrity="sha384-KJ3o2DKtIkvYIK3UENzmM7KCkRr/rE9/Qpg6aAZGJwFDMVNA/GpGFF93hXpG5KkN"
@@ -75,17 +86,20 @@
       crossorigin="anonymous"
     ></script>
 
-{% block javascript %}
+    <!-- JavaScript specific to your application -->
+    {% block javascript %}
     <script type="text/javascript">
+      // Function to delete a note
       function deleteNote(noteId) {
-  fetch("/delete-note", {
-    method: "POST",
-    body: JSON.stringify({ noteId: noteId }),
-  }).then((_res) => {
-    window.location.href = "/";
-  });
-  }
-</script>
-{% endblock %}
+        fetch("/delete-note", {
+          method: "POST",
+          body: JSON.stringify({ noteId: noteId }),
+        }).then((_res) => {
+          // Redirect to the home page after deleting a note
+          window.location.href = "/";
+        });
+      }
+    </script>
+    {% endblock %}
   </body>
 </html>
